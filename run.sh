@@ -79,8 +79,8 @@ fi
 
 echo ""
 echo "🎉 BillPrepared is running!"
-echo "📊 Backend API: http://0.0.0.0:5000 (accessible on your home network via your machine's IP:5000)"
-echo "🌐 Frontend: http://0.0.0.0:5173 (accessible on your home network via your machine's IP:5173)"
+echo "📊 Backend API: http://localhost:5000"
+echo "🌐 Frontend: http://localhost:5173"
 echo ""
 echo "To stop the application:"
 echo "  - Press Ctrl+C (SIGINT)"

@@ -11,9 +11,14 @@ VALIDATED_FORMATS = [
     'DD-MMM-YY'
 ]
 
-DATABASE = 'budget.db'
+import os
+DATABASE = os.path.join(os.path.dirname(__file__), 'budget.db')
 
 def get_db():
+    print(f"DEBUG: Attempting to connect to database at: {DATABASE}")
+    print(f"DEBUG: Current working directory: {os.getcwd()}")
+    print(f"DEBUG: File location: {__file__}")
+    print(f"DEBUG: Directory writable? {os.access(os.path.dirname(DATABASE), os.W_OK)}")
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
