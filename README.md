@@ -49,9 +49,14 @@ cd frontend && npm run dev
 docker-compose up --build
 ```
 
-## Access URLs
+## Access URLs - using ./run.sh
 
 - **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:5000
+
+## Access URLs - using ./docker_install.sh
+
+- **Frontend**: http://localhost:80
 - **Backend API**: http://localhost:5000
 
 ## Project Structure
