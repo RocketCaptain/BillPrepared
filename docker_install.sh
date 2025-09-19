@@ -8,6 +8,10 @@ echo "Starting Docker installation for BillPrepared..."
 echo "Stopping and removing existing containers..."
 docker compose down -v --remove-orphans 2>/dev/null || true
 
+# Ensure data directory exists for persistent database storage
+#echo "Ensuring data directory exists..."
+#mkdir -p data
+
 # Build frontend assets to include latest code changes (dark mode, sidebar, features)
 echo "Building frontend assets..."
 cd frontend

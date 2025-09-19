@@ -55,6 +55,10 @@ def init_settings():
                 )
         conn.commit()
 
+# Initialize database and settings on startup
+init_db()
+init_settings()
+
 @app.route('/')
 def hello():
     return jsonify({'message': 'BillPrepared API'})

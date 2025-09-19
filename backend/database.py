@@ -12,7 +12,7 @@ VALIDATED_FORMATS = [
 ]
 
 import os
-DATABASE = os.path.join(os.path.dirname(__file__), 'budget.db')
+DATABASE = os.path.join(os.path.dirname(__file__), 'data', 'budget.db')
 
 def get_db():
     print(f"DEBUG: Attempting to connect to database at: {DATABASE}")

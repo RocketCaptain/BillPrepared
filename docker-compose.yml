@@ -4,9 +4,10 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./backend/budget.db:/app/budget.db
+      - ./data:/app/data
     environment:
       - FLASK_ENV=production
+    restart: unless-stopped
 
   frontend:
     build: ./frontend
@@ -16,3 +17,4 @@ services:
       - backend
     environment:
       - VITE_API_URL=http://backend:5000
+    restart: unless-stopped

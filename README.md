@@ -13,33 +13,7 @@ A web-based bill coverage application with recurring transaction support.
 
 ## Quick Start
 
-### Option 1: Shell Scripts (Recommended)
-
-```bash
-# Start the app
-./run.sh
-
-# Stop the app
-./kill.sh
-```
-
-### Option 2: Python Script
-
-```bash
-python run.py
-```
-
-### Option 3: Manual Start
-
-```bash
-# Terminal 1: Backend
-cd backend && source venv/bin/activate && python app.py
-
-# Terminal 2: Frontend
-cd frontend && npm run dev
-```
-
-### Option 4: Docker
+### Option 1: Docker (Recomended)
 
 ```bash
 # Build and run
@@ -47,6 +21,35 @@ cd frontend && npm run dev
 
 # Or manually
 docker-compose up --build
+```
+
+### Option 2: Shell Scripts (For Development) 
+
+```bash
+# Start the app
+./run.sh
+
+# Stop the app
+./stop.sh
+
+# Force close the app
+./kill.sh
+```
+
+### Option 3: Python Script
+
+```bash
+python run.py
+```
+
+### Option 4: Manual Start
+
+```bash
+# Terminal 1: Backend
+cd backend && source venv/bin/activate && python app.py
+
+# Terminal 2: Frontend
+cd frontend && npm run dev
 ```
 
 ## Access URLs - using ./run.sh
@@ -67,9 +70,10 @@ BillPrepared/
 ├── kill.sh             # Stop script
 ├── run.py              # Start script (Python)
 ├── docker_install.sh   # Docker setup
+├── docker-compose.yml  # Docker orchestration
+├── data/               # Persistent data storage (Created by docker on run)
 ├── backend/            # Flask API server
-├── frontend/           # React application
-└── docker-compose.yml  # Docker orchestration
+└── frontend/           # React application
 ```
 
 ## Development
@@ -83,4 +87,4 @@ The app supports:
 
 ## Database
 
-Uses SQLite with automatic schema initialization. Database file: `backend/budget.db`
+Uses SQLite with automatic schema initialization. Database file: `data/budget.db`
